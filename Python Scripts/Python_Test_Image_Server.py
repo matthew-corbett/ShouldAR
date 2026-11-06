@@ -8,7 +8,7 @@ from PIL import Image
 serv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # address '0.0.0.0' or '' work to allow connections from other machines.  'localhost' disallows external connections.
 # see https://www.raspberrypi.org/forums/viewtopic.php?t=62108
-serv.bind(('10.0.0.40', 6464))
+serv.bind(('0.0.0.0', 6464))
 serv.listen(5)
 print("Ready to accept 5 connections")
 

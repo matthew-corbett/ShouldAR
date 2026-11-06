@@ -299,7 +299,7 @@ namespace Mediapipe.Unity
 
         IEnumerator GetWebImage()
         {
-            using (UnityWebRequest webRequest = new UnityWebRequest("http://10.0.0.231/uploads/esp32-cam.jpg", UnityWebRequest.kHttpVerbGET))
+            using (UnityWebRequest webRequest = new UnityWebRequest("http://192.168.1.50/uploads/esp32-cam.jpg", UnityWebRequest.kHttpVerbGET))
             {
                 webRequest.downloadHandler = new DownloadHandlerTexture();
                 yield return webRequest.SendWebRequest();

@@ -1,6 +1,7 @@
 #include "esp_camera.h"
 #include "Arduino.h"
 #include "WiFi.h"
+#include "wifi_secrets.h"
 
 // Pin definition for CAMERA_MODEL_AI_THINKER
 #define CAMERA_MODEL_AI_THINKER
@@ -23,23 +24,18 @@
 
 // Variables
 camera_fb_t * fb = NULL;
-//const char* ssid = "Corbett";
-//const char* password = "ConnorBuddy2018";
-const char* ssid = "TP-Link_E6BE"; // Gilbert Place
-const char* password = "19572871"; // Gilbert Place
+// Copy wifi_secrets.h.example to wifi_secrets.h. That file is gitignored.
 WiFiClient client;
 const int timerInterval = 100;    // time between each HTTP POST image
 unsigned long previousMillis = 0;   // last time image was sent
 
-  //String serverName = "10.0.0.99";  //local headset IP 
-  String serverName = "192.168.0.100";  //Gilbert Place Magic Leap IP
-  //String serverName = "10.0.0.40";   
-  const int serverPort = 6464;
+  String serverName = CAMERA_SERVER_HOST;
+  const int serverPort = CAMERA_SERVER_PORT;
 
 void setup() {
   Serial.begin(115200);
   WiFi.mode(WIFI_STA);
-  WiFi.begin(ssid, password);
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   Serial.print("Connecting to WiFi.");
   while (WiFi.status() != WL_CONNECTED) {
     delay(1000);

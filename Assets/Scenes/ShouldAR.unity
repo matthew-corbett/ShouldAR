@@ -785,7 +785,7 @@ PrefabInstance:
     - target: {fileID: 4109117804138322986, guid: 31749ff578870c34ab75e73c1dbff0a7,
         type: 3}
       propertyPath: serverAddress
-      value: 192.168.0.100
+      value: 192.168.1.100
       objectReference: {fileID: 0}
     - target: {fileID: 4109117804138322986, guid: 31749ff578870c34ab75e73c1dbff0a7,
         type: 3}
@@ -1325,7 +1325,7 @@ MonoBehaviour:
   rawVideoTexturesRGBA: {fileID: 0}
   debugImageQuad: {fileID: 1263523334}
   showCapturedImage: 1
-  serverAddress: 192.168.0.100
+  serverAddress: 192.168.1.100
   undistort: 0
 --- !u!4 &1544324064 stripped
 Transform:
