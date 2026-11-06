@@ -38,7 +38,7 @@ MonoBehaviour:
   - width: 512
     height: 512
     frameRate: 0
-  _uri: http://10.0.0.231/uploads/esp32-cam.jpg
+  _uri: http://192.168.1.50/uploads/esp32-cam.jpg
   _defaultAvailableWebImageResolutions:
   - width: 1280
     height: 720
